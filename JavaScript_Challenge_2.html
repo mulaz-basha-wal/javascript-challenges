@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<body>
+    <script type="text/javascript">
+        function findFreq(str, char) {
+            let count = 0;
+            for (let i = 0; i < str.length; i++) {
+                if (str.charAt(i) === char) count += 1;
+            }
+            console.log(`${char} occurs ${count} times in ${str}`);
+        }
+        findFreq("mulaz basha", 'a');
+
+        function areAllEqual(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] !== arr[0]) return false;
+            }
+            return true;
+        }
+        console.log(areAllEqual(['test', 'test', 'test']))
+        console.log(areAllEqual([1, 2, 1, 1, 2]))
+
+        function subArray(arr, n) {
+            return arr.slice(-n);
+        }
+        console.log(subArray([1, 2, 3, 4], 67));
+
+    </script>
+</body>
+
+</html>

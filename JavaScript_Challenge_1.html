@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<body>
+    <script type="text/javascript">
+        // TODO destructure the array so that 2 variables apple and peach
+        // hold values at indexes 0 and 2 in the array
+        const numbersArray = ['apple', 'orange', 'peach'];
+        const [apple, , peach] = numbersArray;
+        console.log(apple, peach);
+
+        // TODO destructure the object to extract name and age of the person
+        const person = {
+            name: 'Mulaz',
+            age: 22,
+            gender: 'Male'
+        };
+        const { name, age, ...remaining } = person;
+        console.log(name, age);
+
+        // TODO combine below arrays into one array array3
+        const array1 = [1, 2, 3];
+        const array2 = [4, 5, 6];
+        const array3 = [...array1, ...array2]
+        console.log(array3);
+
+        // TODO combine below objects into one personDetails object
+        const basicDetails = {
+            name: 'abcde',
+            age: 10,
+            gender: 'm'
+        };
+        const educationDetails = {
+            degree: 'xyz',
+            college: 'anc',
+        }
+        const personDetails = { ...basicDetails, ...educationDetails }
+        console.log(personDetails);
+
+        function largestNumber(numArray) {
+            return Math.max(...numArray);
+        }
+        const testCase1 = [1, 5, 7, 9];
+        const testCase2 = [-1, -5, 0, -100];
+        console.log(`Largest in ${testCase1} is `, largestNumber(testCase1))
+        console.log(`Largest in ${testCase2} is `, largestNumber(testCase2))
+
+        function updateSalaries(employeesArray, percent) {
+            return employeesArray.map((salary) => { return salary + (percent / 100) * salary })
+        }
+        const employeesArray = [100, 500, 700, 400], percent = 10;
+        console.log(updateSalaries(employeesArray, percent));
+    </script>
+</body>
+
+</html>
